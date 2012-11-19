@@ -1,0 +1,23 @@
+.TestTable {
+    border: 2px solid #CCCCCC;
+    border-collapse: collapse;
+    font-family: Cambria, Cochin, Georgia, serif;
+    font-size: 14px;
+    width:100%;
+}
+.TestTable  th {
+    font-weight: bold;
+    font-size: 16px;
+    background-color: #DDE9FF;
+}
+.TestTable tr:nth-of-type(2n + 2) {
+    background-color: #ECF7FF;
+}
+.TestTable td, .TestTable th {
+    border: 1px solid #CCC;
+    padding: 10px;
+}
+
+.TestTable td:nth-of-type(1), th:nth-of-type(1),td:nth-of-type(4), th:nth-of-type(4)  {
+    width: 75px;
+}

@@ -1,0 +1,42 @@
+#login input, input[type="password"], button{
+   -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border: 2px outset #C9C;
+    font-size:18px;
+}
+
+#login label{
+  font-size:24px;
+  color: darkTurquoise;
+  
+}
+
+#login{
+  display: block;
+  border: 2px outset #C9C;
+  position: relative;
+  width:360px;
+  background-color: #0596A1;
+  margin:0 auto; 
+}
+#login input, input[type="password"]{
+  height:30px;
+  width:200px;
+  border: 2px outset #C9C;
+  background-color: white;
+
+}
+
+#login table{
+  height: 160 px;
+  padding-top: 10px;
+  padding-left: 20 px;
+  
+}
+
+#login button {
+  float:right;
+  height:30px;
+  width: 100px;
+  
+}
