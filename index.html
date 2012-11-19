@@ -33,43 +33,49 @@
     </div>
     
     <div id="desktop" style="display: none;">
-      <ul class="tabs">
-		<li><a href="#">Active Sessions</a></li>
-		<li><a href="#">Errors List</a></li>
-		<li><a href="#">Test WCF</a></li>
-	  </ul>
+	 	 
+	  	<div id="tabs_container">
+			<ul id="tabs">
+				<li class="active"><a href="#activeSessions">Active Sessions</a></li>
+				<li><a href="#errorsList">Errors List</a></li>
+				<li><a href="#testWCF">Test WCF</a></li>
+			</ul>
+		</div>
 
-		<!-- tab "panes" -->
-			<div class="panes">
-				<div id="activeSessions">
-				  <button id="refreshActiveSessionsButton" data-bind="click: refreshActiveSessions"> Refresh</button>
-					<div data-bind="simpleGrid: ActiveUsersViewModel"> </div>
-
-				
-				</div>
-				<div id="errorsList">
-				    
-					<button id="refreshErrorsListButton" data-bind="click: refreshErrorsList"> Refresh</button>
-					
-					 
-					<table class="testTable" >
-					<thead>
-						<tr><th >No.</th><th>Firm name</th><th>User name</th><th>Error</th><th>DateTime</th></tr>
-					</thead>
-					<tbody data-bind="foreach: errorsListInitialData">
-						<tr>
-						<td width="10%" data-bind="text: $index() + 1"></td>
-						<td data-bind="text: FirmName"></td>
-						<td data-bind="text: UserName"></td>
-						<td data-bind="text: ErrorSummary"></td>				
-						<td data-bind="text: new Date(parseInt(DateTime.substr(6)))"></td>
-						</tr>
-					</tbody>
-					</table>
-					
-				</div>
-				<div>Maybe include links to all WCF for testing</div>
+		<div id="tabs_content_container">
+			
+			<div id="activeSessions" class="tab_content">
+			  <button id="refreshActiveSessionsButton" data-bind="click: refreshActiveSessions"> Refresh</button>
+				<div data-bind="simpleGrid: ActiveUsersViewModel"> </div>
+				<div> this is atest </div>
 			</div>
+			
+			<div id="errorsList" class="tab_content">
+				
+				<button id="refreshErrorsListButton" data-bind="click: refreshErrorsList"> Refresh</button>
+				
+				 
+				<table class="testTable"  >
+				<thead>
+					<tr><th >No.</th><th>Firm name</th><th>User name</th><th>Error</th><th>DateTime</th></tr>
+				</thead>
+				<tbody data-bind="foreach: errorsListInitialData">
+					<tr>
+					<td width="10%" data-bind="text: $index() + 1"></td>
+					<td data-bind="text: FirmName"></td>
+					<td data-bind="text: UserName"></td>
+					<td data-bind="text: ErrorSummary"></td>				
+					<td data-bind="text: new Date(parseInt(DateTime.substr(6)))"></td>
+					</tr>
+				</tbody>
+				</table>				
+			</div>
+			
+			<div id="testWCF" class="tab_content">
+				Maybe include links to all WCF for testing
+			</div>
+			
+		</div>
     </div>
     
   </body>

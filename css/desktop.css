@@ -1,5 +1,7 @@
 @import url("login.css");
 @import url("table.css");
+@import url("tabs.css");
+@import url("ko_grid.css");
 
 #desktop ul.tabs {
     list-style:none;
